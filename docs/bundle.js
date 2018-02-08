@@ -13,7 +13,7 @@ var supportViewportUnit = function () {
     document.body.appendChild(div);
     elemWidth = parseInt(div.clientWidth, 10);
     halfWidth = parseInt(window.innerWidth / 2, 10);
-    flag = (elemWidth == halfWidth);
+    flag = (Math.abs(elemWidth - halfWidth) <= 1);
     document.body.removeChild(div);
 
     return flag;
