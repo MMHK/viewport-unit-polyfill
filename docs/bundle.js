@@ -11,9 +11,9 @@ var supportViewportUnit = function () {
     div.id = 'checkVw';
     div.setAttribute("style", "width:50vw");
     document.body.appendChild(div);
-    elemWidth = parseInt(document.querySelector("#checkVw").width, 10);
+    elemWidth = parseInt(div.clientWidth, 10);
     halfWidth = parseInt(window.innerWidth / 2, 10);
-    flag = elemWidth == halfWidth;
+    flag = (elemWidth == halfWidth);
     document.body.removeChild(div);
 
     return flag;
