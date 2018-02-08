@@ -11,7 +11,19 @@
     <div class="main">
         <div class="wrap"></div>
     </div>
+    <div id="debug" style="font-size:3em;">
+
+    </div>
     <script type="text/javascript" src="./bundle.js"></script>
+    <script>
+        (function () {
+            if (ViewPortUnitPolyfill.support()) {
+                document.querySelector("#debug").innerHTML = "support viewport unit";
+            } else {
+                document.querySelector("#debug").innerHTML = "not support viewport unit";
+            }
+        })();
+    </script>
 </body>
 
 </html>

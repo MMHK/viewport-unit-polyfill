@@ -199,6 +199,11 @@ var initLayoutEngine = function () {
 if (!supportViewportUnit()) {
     initLayoutEngine();
 }
+
+module.exports = {
+    support: supportViewportUnit,
+    render: initLayoutEngine
+};
 },{"core-js/fn/array/for-each":4,"core-js/fn/array/is-array":5,"core-js/fn/array/map":6,"core-js/fn/object/define-property":7,"css":43}],2:[function(require,module,exports){
 (function (process,__filename){
 /** vim: et:ts=4:sw=4:sts=4

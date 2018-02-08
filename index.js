@@ -198,3 +198,8 @@ var initLayoutEngine = function () {
 if (!supportViewportUnit()) {
     initLayoutEngine();
 }
+
+module.exports = {
+    support: supportViewportUnit,
+    render: initLayoutEngine
+};
